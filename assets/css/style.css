@@ -571,6 +571,18 @@ body.cursor-hover .cursor-ring {
 .project-item:hover::before { background: var(--gold); }
 .project-item:first-child { border-top: 1px solid var(--border); }
 
+.project-item--client::before {
+  background: var(--accent-mint, #5eead4);
+  opacity: 0.28;
+}
+.project-item--client:hover::before {
+  background: var(--accent-mint, #5eead4);
+  opacity: 0.55;
+}
+.project-item--client:hover .project-item-title {
+  color: var(--accent-mint, #5eead4);
+}
+
 .project-item--accent::before { background: var(--gold) !important; opacity: 0.5; }
 
 .project-item-meta {
@@ -585,6 +597,11 @@ body.cursor-hover .cursor-ring {
   border: 1px solid rgba(37,99,235,0.15);
   border-radius: 100px;
   color: #7eb3ff;
+}
+.project-badge--client {
+  background: rgba(94, 234, 212, 0.1);
+  border-color: rgba(94, 234, 212, 0.28);
+  color: var(--accent-mint, #5eead4);
 }
 .project-badge--gold {
   background: var(--gold-dim);
@@ -630,6 +647,13 @@ body.cursor-hover .cursor-ring {
   border: 1px solid var(--border);
   padding: 0.4rem 0.875rem; border-radius: 100px;
   white-space: nowrap; font-style: italic;
+}
+.btn-soon--client {
+  color: var(--accent-mint, #5eead4);
+  opacity: 0.92;
+  border-color: rgba(94, 234, 212, 0.35);
+  font-style: normal;
+  font-weight: 500;
 }
 .btn-soon--gold {
   color: var(--gold); opacity: 0.75;

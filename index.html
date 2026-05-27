@@ -9,9 +9,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Press+Start+2P&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/v3-experience.css" />
 </head>
 <body>
 
@@ -19,11 +20,20 @@
   <div class="cursor-dot" id="cursorDot"></div>
   <div class="cursor-ring" id="cursorRing"></div>
 
-  <!-- Loader -->
-  <div class="loader" id="loader">
-    <div class="loader-inner">
-      <span class="loader-initials">RM</span>
-      <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  <!-- Loader — barre type recherche + Entrée -->
+  <div class="loader loader--search" id="loader" role="dialog" aria-modal="true" aria-labelledby="loaderTitle">
+    <span id="loaderTitle" class="visually-hidden">Chargement du portfolio</span>
+    <div class="loader-search-inner">
+      <div class="loader-search-bar">
+        <span class="loader-search-icon" aria-hidden="true">🔍</span>
+        <div class="loader-typed-wrap">
+          <span id="loaderTyped" class="loader-typed-output"></span><span class="loader-cursor-blink" aria-hidden="true">|</span>
+        </div>
+      </div>
+      <div class="loader-enter-row" id="loaderEnterRow">
+        <button type="button" class="loader-kbd" id="loaderEnterBtn">Entrée</button>
+        <span class="loader-hint-text">pour ouvrir le site</span>
+      </div>
     </div>
   </div>
 
@@ -50,8 +60,8 @@
 
   <main>
 
-    <!-- ══ HERO ═══════════════════════════════════════════════════ -->
-    <section class="hero" id="hero">
+    <!-- ══ HERO — split + I'm + typewriter EN ═══════════════════════ -->
+    <section class="hero hero--split" id="hero">
       <div class="hero-bg">
         <div class="hero-grid"></div>
         <div class="hero-glow hero-glow--1"></div>
@@ -64,62 +74,60 @@
         </div>
       </div>
 
-      <div class="hero-content container">
+      <div class="hero-split-grid">
 
-        <div class="hero-tag reveal-up" data-delay="0">
-          <span class="tag-dot"></span>
-          En recherche d'alternance · Développement Web &amp; Digital · Toulouse
-        </div>
-
-        <h1 class="hero-title reveal-up" data-delay="100">
-          <span class="hero-name">Ryan Martial</span>
-        </h1>
-
-        <p class="hero-subtitle reveal-up" data-delay="200">
-          Chef de Projet Digital
-          <span class="hero-amp">&amp;</span>
-          Webmaster Polyvalent
-        </p>
-
-        <p class="hero-desc reveal-up" data-delay="300">
-          Je transforme des idées digitales en projets structurés, concrets et exploitables —<br class="br-desktop" />
-          grâce au web, à l'IA, à l'automatisation et à la gestion de projet.
-        </p>
-
-        <!-- Piliers — honnêtes, sans faux chiffres -->
-        <div class="hero-pillars reveal-up" data-delay="400">
-          <div class="pillar">
-            <span class="pillar-icon">&lt;/&gt;</span>
-            <span>Dev Web</span>
-          </div>
-          <div class="pillar-sep"></div>
-          <div class="pillar">
-            <span class="pillar-icon">⬡</span>
-            <span>Chef de Projet</span>
-          </div>
-          <div class="pillar-sep"></div>
-          <div class="pillar">
-            <span class="pillar-icon">✦</span>
-            <span>IA &amp; Auto.</span>
-          </div>
-          <div class="pillar-sep"></div>
-          <div class="pillar">
-            <span class="pillar-icon">◎</span>
-            <span>Stratégie</span>
+        <div class="hero-photo-col reveal-left" data-delay="0">
+          <div class="hero-photo-wrap shine-border">
+            <img
+              class="hero-photo-img"
+              src="assets/img/image.png"
+              alt="Ryan Martial"
+              width="480"
+              height="600"
+              draggable="false"
+            />
           </div>
         </div>
 
-        <div class="hero-actions reveal-up" data-delay="500">
-          <a href="#projects" class="btn btn-primary">
-            <span>Voir mes projets</span>
-            <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <a href="#contact" class="btn btn-ghost">Me contacter</a>
-        </div>
+        <div class="hero-text-col reveal-right" data-delay="80">
+          <div class="hero-tag hero-tag--inline reveal-up" data-delay="0">
+            <span class="tag-dot"></span>
+            Alternance dev web · Toulouse · 2026
+          </div>
 
+          <p class="hero-name-tag reveal-up" data-delay="40" lang="en">Ryan Martial</p>
+          <h1 class="hero-im reveal-up" data-delay="60" lang="en">I'm</h1>
+          <p class="hero-type-line reveal-up" data-delay="80" lang="en">
+            <span id="heroTyped" class="hero-typed"></span><span class="hero-type-caret" aria-hidden="true">|</span>
+          </p>
+
+          <p class="hero-desc hero-desc--short reveal-up" data-delay="120" lang="fr">
+            Développeur web, webmaster et chef de projet digital junior — je relie <strong>code</strong>, <strong>WordPress</strong>,
+            <strong>design</strong> et <strong>IA</strong> pour créer des projets utiles, propres et vivants. Objectif : progresser fort,
+            apprendre vite et apporter de la bonne énergie dans une équipe.
+          </p>
+
+          <div class="hero-pillars reveal-up" data-delay="180">
+            <div class="pillar"><span class="pillar-icon">&lt;/&gt;</span><span>Dev Web</span></div>
+            <div class="pillar-sep"></div>
+            <div class="pillar"><span class="pillar-icon">⬡</span><span>Chef de Projet</span></div>
+            <div class="pillar-sep"></div>
+            <div class="pillar"><span class="pillar-icon">✦</span><span>IA & Automatisation</span></div>
+            <div class="pillar-sep"></div>
+            <div class="pillar"><span class="pillar-icon">◎</span><span>Stratégie</span></div>
+          </div>
+
+          <div class="hero-actions reveal-up" data-delay="220">
+            <a href="#projects" class="btn btn-primary magnetic-hover">
+              <span>Projets</span>
+              <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#contact" class="btn btn-ghost magnetic-hover">Contact</a>
+          </div>
+        </div>
       </div>
 
-      <a href="#about" class="hero-scroll" aria-label="Défiler">
+      <a href="#about" class="hero-scroll" aria-label="Défiler vers la suite">
         <span class="scroll-label">Découvrir</span>
         <div class="scroll-line"><div class="scroll-dot"></div></div>
       </a>
@@ -131,43 +139,61 @@
 
         <div class="section-header reveal-up">
           <span class="section-tag">01 — À propos</span>
-          <h2 class="section-title">Un profil digital<br /><em>polyvalent</em></h2>
+          <h2 class="section-title">Profil digital<br /><em>polyvalent</em></h2>
         </div>
 
-        <div class="about-grid">
+        <div class="about-grid about-grid--text-only">
 
-          <div class="about-visual reveal-left">
-            <div class="about-img-frame">
-              <img src="assets/img/image.png" alt="Ryan Martial" class="about-photo" />
-              <!-- div class="about-img-placeholder" aria-hidden="true">
-                <svg viewBox="0 0 80 80" fill="none"><circle cx="40" cy="30" r="14" stroke="currentColor" stroke-width="1.2"/><path d="M12 70c0-15.464 12.536-28 28-28s28 12.536 28 28" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-                <span>Photo à venir</span>
-              </div> -->
-              <div class="about-badge">
-                <span class="badge-label">En recherche</span>
-                <span class="badge-main">Alternance Développement Web</span>
-                <span class="badge-sub">Toulouse · Campus Innove · 2026</span>
-              </div>
+          <div class="about-content reveal-up">
+
+            <div class="tldr-box">
+              <header class="tldr-box__head">
+                <h3 class="tldr-box__title">TL;DR</h3>
+                <p class="tldr-box__subtitle">Too Long Didn’t Read</p>
+              </header>
+              <dl class="tldr-box__list">
+                <div class="tldr-row">
+                  <dt>Parcours</dt>
+                  <dd>Graphisme → Dev web → DigiJet → Chef de projet digital</dd>
+                </div>
+                <div class="tldr-row">
+                  <dt>Statut</dt>
+                  <dd>Recherche d’alternance développeur web à Toulouse</dd>
+                </div>
+                <div class="tldr-row">
+                  <dt>Objectif</dt>
+                  <dd>Monter en compétence, apprendre en équipe et créer des projets utiles</dd>
+                </div>
+                <div class="tldr-row">
+                  <dt>Style</dt>
+                  <dd>Code propre, design soigné, IA bien utilisée, vision projet</dd>
+                </div>
+                <div class="tldr-row">
+                  <dt>Mission</dt>
+                  <dd>Apporter de l’énergie, apprendre vite et construire des solutions concrètes</dd>
+                </div>
+              </dl>
+              <p class="tldr-box__foot">En résumé : jeune développeur motivé, curieux et prêt à apprendre.</p>
             </div>
-          </div>
-
-          <div class="about-content reveal-right">
 
             <p class="about-intro">
-              Je viens du graphisme et du développement web. Pour moi, un bon projet digital, c'est aussi comprendre le besoin, structurer les idées et livrer quelque chose d'utile — pas seulement du beau design ou des lignes de code.
+              Un bon projet digital, ce n’est pas juste une belle interface : c’est une idée claire, une structure solide, un
+              livrable utile… et un peu de personnalité aussi.
             </p>
 
             <p class="about-text">
-              Ma formation Chef de Projet Digital m'a donné une vision globale : cadrage, stratégie, organisation et suivi. Aujourd'hui je veux surtout <strong>monter en développement</strong> pour des projets plus complets et plus autonomes. L'IA et l'automatisation m'intéressent quand elles font gagner du temps au quotidien. Avec <strong class="text-accent">DigiJet</strong>, micro-entreprise orientée services web, je pratique sur le terrain et j'accompagne de petites structures.
+              Ma formation de chef de projet digital m’a appris à cadrer, organiser et présenter un projet proprement.
+              Aujourd’hui, je veux surtout <strong>renforcer mon niveau en développement</strong> pour créer des sites et interfaces
+              plus solides. Avec <strong class="text-accent">DigiJet</strong>, j’ai aussi touché au terrain : WordPress, relation
+              client, SEO local, accompagnement digital et petits projets concrets.
             </p>
 
             <div class="about-values">
-              <div class="value-item"><span class="value-dot"></span><span>Rigueur et méthode</span></div>
-              <div class="value-item"><span class="value-dot"></span><span>Curiosité permanente</span></div>
-              <div class="value-item"><span class="value-dot"></span><span>Vision globale du projet</span></div>
-              <div class="value-item"><span class="value-dot"></span><span>Profil en progression</span></div>
+              <div class="value-item"><span class="value-dot"></span><span>Rigueur</span></div>
+              <div class="value-item"><span class="value-dot"></span><span>Curiosité</span></div>
+              <div class="value-item"><span class="value-dot"></span><span>Vision projet</span></div>
               <div class="value-item"><span class="value-dot"></span><span>Autonomie</span></div>
-              <div class="value-item"><span class="value-dot"></span><span>Envie d'apprendre en équipe</span></div>
+              <div class="value-item"><span class="value-dot"></span><span>Équipe</span></div>
             </div>
 
           </div>
@@ -182,105 +208,81 @@
 
         <div class="section-header reveal-up">
           <span class="section-tag">02 — Compétences</span>
-          <h2 class="section-title">Ce que je<br /><em>maîtrise</em></h2>
+          <h2 class="section-title">Où je passe<br /><em>le plus de temps</em></h2>
+          <p class="skills-head-extra">
+            Stats indicatives — ça bouge avec les projets, les galères, les tutos et les nuits blanches.
+          </p>
         </div>
 
-        <div class="skills-layout">
+        <div class="skill-stats">
 
-          <div class="skills-col">
-
-            <div class="skill-block reveal-up" data-delay="0">
-              <div class="skill-block-head">
-                <div class="skill-icon">
-                  <svg viewBox="0 0 26 26" fill="none"><path d="M6 9l-4 4 4 4M20 9l4 4-4 4M15 5l-4 16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </div>
-                <h3>Développement Web</h3>
-              </div>
-              <div class="skill-tags">
-                <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
-                <span>Responsive</span><span>Bases PHP</span><span>Bases MySQL</span><span>VS Code</span>
-              </div>
+          <article class="skill-stat-row reveal-up" data-delay="0" style="--stat-pct: 90%">
+            <div class="skill-stat-top">
+              <span class="skill-stat-label">⚔️ Front &amp; intégration</span>
+              <span class="skill-stat-lv">LV. DEV</span>
             </div>
+            <div class="skill-stat-bar"><div class="skill-stat-fill"></div></div>
+            <div class="skill-stat-tags"><span>HTML</span><span>CSS</span><span>JS</span><span>Responsive</span></div>
+          </article>
 
-            <div class="skill-block reveal-up" data-delay="80">
-              <div class="skill-block-head">
-                <div class="skill-icon">
-                  <svg viewBox="0 0 26 26" fill="none"><rect x="3" y="3" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.4"/><path d="M3 10h20M10 10v13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-                </div>
-                <h3>WordPress &amp; CMS</h3>
-              </div>
-              <div class="skill-tags">
-                <span>WordPress</span><span>Elementor</span><span>Sites vitrines</span>
-                <span>Maintenance</span><span>SEO technique</span><span>Notions WooCommerce</span>
-              </div>
+          <article class="skill-stat-row reveal-up" data-delay="60" style="--stat-pct: 85%">
+            <div class="skill-stat-top">
+              <span class="skill-stat-label">🏰 WordPress &amp; CMS</span>
+              <span class="skill-stat-lv">LV. CMS</span>
             </div>
+            <div class="skill-stat-bar"><div class="skill-stat-fill"></div></div>
+            <div class="skill-stat-tags"><span>WP</span><span>Elementor</span><span>SEO tech</span></div>
+          </article>
 
-            <div class="skill-block reveal-up" data-delay="160">
-              <div class="skill-block-head">
-                <div class="skill-icon">
-                  <svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="4" stroke="currentColor" stroke-width="1.4"/><path d="M13 3v3M13 20v3M3 13h3M20 13h3M5.64 5.64l2.12 2.12M18.24 18.24l2.12 2.12M5.64 20.36l2.12-2.12M18.24 7.76l2.12-2.12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-                </div>
-                <h3>IA &amp; Automatisation</h3>
-              </div>
-              <div class="skill-tags">
-                <span>ChatGPT</span><span>Gemini</span><span>Claude</span>
-                <span>Make</span><span>Prompt engineering</span>
-                <span>Automatisation de tâches</span><span>Debug assisté IA</span>
-              </div>
+          <article class="skill-stat-row reveal-up" data-delay="120" style="--stat-pct: 70%">
+            <div class="skill-stat-top">
+              <span class="skill-stat-label">🧭 Pilotage projet</span>
+              <span class="skill-stat-lv">LV. PM</span>
             </div>
+            <div class="skill-stat-bar"><div class="skill-stat-fill"></div></div>
+            <div class="skill-stat-tags"><span>CDC</span><span>Kanban</span><span>KPI</span><span>Livrables</span></div>
+          </article>
 
-          </div>
-
-          <div class="skills-divider" aria-hidden="true"></div>
-
-          <div class="skills-col">
-
-            <div class="skill-block reveal-up" data-delay="60">
-              <div class="skill-block-head">
-                <div class="skill-icon">
-                  <svg viewBox="0 0 26 26" fill="none"><path d="M4 8h18M4 13h12M4 18h14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="21" cy="18" r="3" stroke="currentColor" stroke-width="1.4"/></svg>
-                </div>
-                <h3>Gestion de Projet Digital</h3>
-              </div>
-              <div class="skill-tags">
-                <span>Cahier des charges</span><span>Backlog</span><span>Kanban</span>
-                <span>RACI</span><span>Gantt</span><span>KPI</span>
-                <span>ClickUp</span><span>Trello</span><span>Notion</span>
-                <span>Recettage</span><span>Livrables</span>
-              </div>
+          <article class="skill-stat-row reveal-up" data-delay="180" style="--stat-pct: 75%">
+            <div class="skill-stat-top">
+              <span class="skill-stat-label">🎨 Design &amp; UI</span>
+              <span class="skill-stat-lv">LV. UI</span>
             </div>
+            <div class="skill-stat-bar"><div class="skill-stat-fill"></div></div>
+            <div class="skill-stat-tags"><span>Figma</span><span>Ps</span><span>Ai</span><span>Maquettes</span></div>
+          </article>
 
-            <div class="skill-block reveal-up" data-delay="140">
-              <div class="skill-block-head">
-                <div class="skill-icon">
-                  <svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="8" stroke="currentColor" stroke-width="1.4"/><path d="M13 4v3M13 19v3M4 13h3M19 13h3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="13" cy="13" r="2" fill="currentColor"/></svg>
-                </div>
-                <h3>Design &amp; UX/UI</h3>
-              </div>
-              <div class="skill-tags">
-                <span>Figma</span><span>Photoshop</span><span>Illustrator</span>
-                <span>Suite Adobe</span><span>Canva</span><span>Wireframes</span>
-                <span>Maquettes</span><span>Charte graphique</span>
-                <span>Ergonomie</span><span>Génération visuelle IA</span>
-              </div>
+          <article class="skill-stat-row reveal-up" data-delay="240" style="--stat-pct: 60%">
+            <div class="skill-stat-top">
+              <span class="skill-stat-label">📡 Stratégie digitale</span>
+              <span class="skill-stat-lv">LV. STRAT</span>
             </div>
+            <div class="skill-stat-bar"><div class="skill-stat-fill"></div></div>
+            <div class="skill-stat-tags"><span>SEO</span><span>SEA</span><span>Social</span><span>Analytics</span></div>
+          </article>
 
-            <div class="skill-block reveal-up" data-delay="220">
-              <div class="skill-block-head">
-                <div class="skill-icon">
-                  <svg viewBox="0 0 26 26" fill="none"><path d="M4 21l4.5-6.5 3.5 2.5 4.5-8 4.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="21" r="1.5" fill="currentColor"/><circle cx="21" cy="12.5" r="1.5" fill="currentColor"/></svg>
-                </div>
-                <h3>Stratégie Digitale</h3>
-              </div>
-              <div class="skill-tags">
-                <span>SEO</span><span>SEA</span><span>Google Analytics</span>
-                <span>Réseaux sociaux</span><span>Audit digital</span>
-                <span>Benchmark</span><span>SWOT</span><span>Personas</span>
-                <span>Objectifs SMART</span><span>Calendrier éditorial</span>
-              </div>
+          <article class="skill-stat-row reveal-up" data-delay="300" style="--stat-pct: 70%">
+            <div class="skill-stat-top">
+              <span class="skill-stat-label">✨ IA &amp; automation</span>
+              <span class="skill-stat-lv">LV. BUFF</span>
             </div>
+            <div class="skill-stat-bar"><div class="skill-stat-fill"></div></div>
+            <div class="skill-stat-tags"><span>Prompts</span><span>Make</span><span>Assistants</span></div>
+          </article>
 
-          </div>
+          <article class="skill-stat-row reveal-up" data-delay="360" style="--stat-pct: 48%">
+            <div class="skill-stat-top">
+              <span class="skill-stat-label">🔧 PHP / SQL (bases)</span>
+              <span class="skill-stat-lv">LV. SIDE</span>
+            </div>
+            <div class="skill-stat-bar"><div class="skill-stat-fill"></div></div>
+            <div class="skill-stat-tags"><span>PHP</span><span>MySQL</span></div>
+          </article>
+
+        </div>
+
+        <div class="tech-strip reveal-up" aria-hidden="true">
+          <span>VS Code</span><span>GitHub</span><span>Cursor</span><span>Notion</span><span>ClickUp</span><span>Trello</span>
         </div>
 
       </div>
@@ -294,7 +296,8 @@
           <span class="section-tag">03 — Projets</span>
           <h2 class="section-title">Travaux &amp;<br /><em>études de cas</em></h2>
           <p class="section-note">
-            Ces projets reflètent mon apprentissage, ma méthode de travail et ma progression à travers des cas pédagogiques OpenClassrooms et mon activité personnelle DigiJet.
+            Projets de formation, cas concrets et expériences terrain — pas besoin de gonfler le CV, le mieux reste de montrer
+            ce qui a vraiment été construit.
           </p>
         </div>
 
@@ -309,7 +312,7 @@
               </div>
               <h3 class="project-item-title">Green Futur</h3>
               <p class="project-item-desc">
-                Cadrage d'un projet de chatbot IA pour un site e-commerce engagé dans l'innovation écologique. Analyse du contexte, veille technologique, benchmark, SWOT, définition des personas, contraintes RGPD, RSE et accessibilité. Comparaison de solutions via tableau de scoring, proposition de déploiement et définition des KPI.
+                Cadrage d’un chatbot IA pour un e-commerce engagé : contexte, benchmark, SWOT, personas, RGPD / RSE, scoring de solutions, KPI.
               </p>
               <div class="project-skills">
                 <span>IA</span><span>Cahier des charges</span><span>RGPD</span>
@@ -330,7 +333,7 @@
               </div>
               <h3 class="project-item-title">OhMyFood</h3>
               <p class="project-item-desc">
-                Reprise et réalisation d'un site WordPress à partir de maquettes validées. Intégration HTML, CSS et JavaScript, configuration en local, création des pages Accueil, À propos et Restaurant, formulaire Contact Form 7, pop-up JavaScript, responsive et tests d'accessibilité.
+                WordPress sur maquettes : intégration HTML/CSS/JS, pages clés, Contact Form 7, pop-up, responsive &amp; accessibilité.
               </p>
               <div class="project-skills">
                 <span>WordPress</span><span>HTML</span><span>CSS</span>
@@ -352,7 +355,7 @@
               </div>
               <h3 class="project-item-title">Hyatt</h3>
               <p class="project-item-desc">
-                Création d'un plan webmarketing pour un hôtel de luxe : analyse de marché, benchmark concurrentiel, SWOT, personas, stratégie SEO/SEA et réseaux sociaux, calendrier éditorial, objectifs SMART, KPI, estimation budgétaire et ROI.
+                Plan webmarketing d'un hôtel de luxe : marché, benchmark, SWOT, personas, SEO/SEA, social, calendrier, SMART, KPI, budget.
               </p>
               <div class="project-skills">
                 <span>SEO</span><span>SEA</span><span>Réseaux sociaux</span>
@@ -373,7 +376,7 @@
               </div>
               <h3 class="project-item-title">Hello Hercule</h3>
               <p class="project-item-desc">
-                Structuration et pilotage d'un projet de start-up Food Tech. Définition de la vision projet, organisation de l'équipe, RACI, planning Gantt, appel d'offres, grille d'évaluation des prestataires, backlog produit, plan de validation et gestion des risques.
+                Pilotage Food Tech : vision, RACI, Gantt, backlog, validation, risques.
               </p>
               <div class="project-skills">
                 <span>Gestion de projet</span><span>RACI</span><span>Gantt</span>
@@ -382,6 +385,31 @@
             </div>
             <div class="project-item-right">
               <span class="btn-soon">Résumé bientôt disponible</span>
+            </div>
+          </article>
+
+          <!-- Sakalava -->
+          <article class="project-item project-item--client reveal-up" data-delay="210">
+            <div class="project-item-left">
+              <div class="project-item-meta">
+                <span class="project-badge project-badge--client">Projet client · DigiJet</span>
+                <span class="project-type-label">Site WordPress &amp; Expérience client</span>
+              </div>
+              <h3 class="project-item-title">Sakalava</h3>
+              <p class="project-item-desc">
+                Création et accompagnement d’un site WordPress pour un lodge / centre de kitesurf à Madagascar.
+                Intégration Elementor, SEO, accompagnement client, chatbot IA connecté à l’API OpenAI et optimisation de
+                l’expérience utilisateur.
+              </p>
+              <div class="project-skills">
+                <span>WordPress</span><span>Elementor</span><span>SEO</span><span>Chatbot IA</span>
+                <span>API OpenAI</span><span>Accompagnement digital</span><span>Relation client</span>
+              </div>
+            </div>
+            <div class="project-item-right">
+              <a href="https://sakalava.com" target="_blank" rel="noopener noreferrer">
+                <span class="btn-soon btn-soon--client">Voir le site Web</span>
+              </a>
             </div>
           </article>
 
@@ -394,15 +422,15 @@
               </div>
               <h3 class="project-item-title">DigiJet</h3>
               <p class="project-item-desc">
-                Création d'une micro-entreprise orientée services web : création de sites vitrines, WordPress, accompagnement digital, réflexion SEO et aide à la présence en ligne pour les petites structures. Un projet personnel pour progresser sur des cas concrets.
+                Micro-entreprise web : sites vitrines, WordPress, accompagnement digital, SEO.
               </p>
               <div class="project-skills">
-                <span>WordPress</span><span>Webmastering</span><span>Relation client</span>
+                <span>WordPress</span><span>Webmastering</span>
                 <span>SEO</span><span>Accompagnement digital</span>
               </div>
             </div>
             <div class="project-item-right">
-              <span class="btn-soon btn-soon--gold">En cours de développement</span>
+              <a href="https://ryanjpm.github.io/digijet/" ><span class="btn-soon btn-soon--gold">Voir le Site Web</span></a>
             </div>
           </article>
 
@@ -469,7 +497,7 @@
               <div class="timeline-line"></div>
             </div>
             <div class="timeline-content">
-              <span class="timeline-date">2021</span>
+              <span class="timeline-date">2022</span>
               <h3 class="timeline-title">Graphiste Web</h3>
               <p class="timeline-org">Formation · Institut de Formation de La Réunion</p>
               <p class="timeline-desc">Découverte du design web, de la création graphique, de l'identité visuelle et prise en main d'outils Adobe comme Photoshop et Illustrator.</p>
@@ -482,7 +510,7 @@
               <div class="timeline-dot"></div>
             </div>
             <div class="timeline-content">
-              <span class="timeline-date">2020 — 2021</span>
+              <span class="timeline-date">2021</span>
               <h3 class="timeline-title">Niveau CAP Électricien du bâtiment</h3>
               <p class="timeline-org">Formation technique · Bâtiment</p>
               <p class="timeline-desc">Première expérience dans un domaine technique concret : rigueur, logique pratique, travail manuel « sur le terrain » et compréhension d'environnements matériels, avant de m'orienter vers le web.</p>
@@ -504,7 +532,7 @@
         </div>
 
         <p class="method-intro reveal-up">
-          Chaque projet est différent. Mais ma façon de l'aborder reste la même : structurée, honnête et orientée résultat.
+          Ma logique : comprendre vite, structurer proprement, produire sérieusement et améliorer sans ego.
         </p>
 
         <div class="method-steps">
@@ -513,7 +541,7 @@
             <div class="step-num">01</div>
             <div class="step-body">
               <h3>Comprendre le besoin</h3>
-              <p>Analyse du contexte, des objectifs, du client, des contraintes, de la faisabilité et des priorités. Rien ne sert de démarrer si le besoin n'est pas clairement cerné.</p>
+              <p>Contexte, objectifs, contraintes — on cadre avant de produire.</p>
             </div>
           </div>
 
@@ -521,7 +549,7 @@
             <div class="step-num">02</div>
             <div class="step-body">
               <h3>Structurer les fondations</h3>
-              <p>Clarification du périmètre, rédaction du cahier des charges, définition des livrables, choix des outils et organisation du projet — avant de toucher à quoi que ce soit.</p>
+              <p>Périmètre, CDC, livrables, outils — les fondations avant le code.</p>
             </div>
           </div>
 
@@ -529,7 +557,7 @@
             <div class="step-num">03</div>
             <div class="step-body">
               <h3>Concevoir la solution</h3>
-              <p>Wireframes, maquettes, stratégie digitale, choix techniques, parcours utilisateur, architecture des contenus. On réfléchit avant de produire.</p>
+              <p>Wireframes, maquettes, technos, parcours — on pense avant de livrer.</p>
             </div>
           </div>
 
@@ -537,7 +565,7 @@
             <div class="step-num">04</div>
             <div class="step-body">
               <h3>Produire et suivre</h3>
-              <p>Développement, intégration, automatisation ou coordination selon le projet. Suivi en continu via backlog, Kanban, ClickUp, Trello ou Notion.</p>
+              <p>Build, intégration ou coordination — backlog / Kanban / Notion au quotidien.</p>
             </div>
           </div>
 
@@ -545,7 +573,7 @@
             <div class="step-num">05</div>
             <div class="step-body">
               <h3>Tester, livrer et améliorer</h3>
-              <p>Recettage, plan de validation, tests responsive et accessibilité, corrections, documentation et suivi après livraison. Un projet livré n'est pas un projet abandonné.</p>
+              <p>Recette, accessibilité, doc — la livraison n’est pas la fin.</p>
             </div>
           </div>
 
@@ -559,7 +587,7 @@
 
         <div class="section-header reveal-up">
           <span class="section-tag">06 — Contact</span>
-          <h2 class="section-title">Parlons de<br /><em>votre projet.</em></h2>
+          <h2 class="section-title">Parlons d’un projet,<br />d’une alternance ou d’une bonne idée.</h2>
         </div>
 
         <div class="contact-grid">
@@ -567,7 +595,7 @@
           <div class="contact-info reveal-left">
 
             <p class="contact-intro">
-              Disponible pour des projets web, missions digitales, alternance, stage ou opportunités professionnelles. N'hésitez pas à me contacter.
+              Alternance, mission web ou projet digital — un message suffit pour lancer la discussion.
             </p>
 
             <div class="contact-links">
@@ -635,7 +663,9 @@
             <div class="contact-cta-inner">
               <p class="contact-cta-kicker">Portfolio en ligne</p>
               <p class="contact-cta-text">
-                Cette version est <strong>100 % statique</strong> (hébergement GitHub Pages) : pas de formulaire, aucune donnée saisie sur le site. Utilise les liens à gauche ou ouvre directement ta messagerie.
+                Ce portfolio est <strong>hébergé en statique</strong>, sans formulaire intégré. Pour me contacter, vous pouvez
+                passer par <strong>email</strong>, <strong>téléphone</strong> ou <strong>LinkedIn</strong>. Je réponds dès que
+                possible — surtout si le projet est intéressant.
               </p>
               <div class="contact-cta-actions">
                 <a href="mailto:ryanmpro@outlook.fr" class="btn btn-primary">
@@ -681,6 +711,38 @@
       </div>
     </div>
   </footer>
+
+  <!-- Compagnon pixel + toast présence -->
+  <div id="pixelBuddy" class="pixel-buddy" aria-hidden="true">
+    <div class="pixel-buddy-inner">
+      <div class="pixel-buddy-bubble" id="buddyBubble" hidden>
+        <p id="buddyBubbleText"></p>
+      </div>
+      <div
+        class="pixel-buddy-sprite"
+        id="buddySprite"
+        role="img"
+        aria-label="Avatar interactif de Ryan Martial"
+      >
+        <div class="pixel-sprite-body" id="buddyFace" data-mood="normal">
+          <div class="pixel-hair"></div>
+          <div class="pixel-eyes"><span></span><span></span></div>
+          <div class="pixel-mouth"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="dwellToast" class="dwell-toast" role="status" aria-live="polite" hidden>
+    <div class="dwell-toast-icon" aria-hidden="true">✨</div>
+    <div class="dwell-toast-body">
+      <small>Portfolio</small>
+      <p>
+        Vous êtes encore là ? C’est sûrement bon signe. Si le profil vous parle, envoyez-moi un message je ne mord pas.
+      </p>
+    </div>
+    <button type="button" class="dwell-toast-close" id="dwellToastClose" aria-label="Fermer">×</button>
+  </div>
 
   <script src="assets/js/script.js"></script>
 </body>
