@@ -641,6 +641,11 @@ body.cursor-hover .cursor-ring {
   display: flex; align-items: flex-start;
   padding-top: 2.5rem; flex-shrink: 0;
 }
+.project-item-right a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
 .btn-soon {
   font-size: 0.75rem; font-weight: 400;
   color: var(--text-muted); letter-spacing: 0.04em;
