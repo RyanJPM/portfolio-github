@@ -722,23 +722,29 @@
     </div>
   </footer>
 
-  <!-- Compagnon pixel + toast présence -->
+  <!-- Compagnon pixel — Creeper du portfolio -->
   <div id="pixelBuddy" class="pixel-buddy" aria-hidden="true">
     <div class="pixel-buddy-inner">
       <div class="pixel-buddy-bubble" id="buddyBubble" hidden>
         <p id="buddyBubbleText"></p>
       </div>
       <div
-        class="pixel-buddy-sprite"
+        class="creeper-buddy-sprite"
         id="buddySprite"
         role="img"
-        aria-label="Avatar interactif de Ryan Martial"
+        aria-label="Compagnon pixel interactif du portfolio"
       >
-        <div class="pixel-sprite-body" id="buddyFace" data-mood="normal">
-          <div class="pixel-hair"></div>
-          <div class="pixel-eyes"><span></span><span></span></div>
-          <div class="pixel-mouth"></div>
+        <div class="creeper-face" id="buddyFace" data-mood="normal">
+          <div class="creeper-eyes">
+            <div class="creeper-eye">
+              <div class="creeper-pupil" id="buddyPupilL"></div>
+            </div>
+            <div class="creeper-eye">
+              <div class="creeper-pupil" id="buddyPupilR"></div>
+            </div>
+          </div>
         </div>
+        <div class="creeper-burst" id="buddyBurst" aria-hidden="true"></div>
       </div>
     </div>
   </div>
@@ -754,6 +760,7 @@
     <button type="button" class="dwell-toast-close" id="dwellToastClose" aria-label="Fermer">×</button>
   </div>
 
+  <script src="assets/js/pixel-buddy.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
 </html>
