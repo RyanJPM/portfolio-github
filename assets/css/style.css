@@ -25,6 +25,10 @@
   --gold-dim:      rgba(201, 151, 44, 0.10);
   --gold-glow:     rgba(201, 151, 44, 0.18);
 
+  /* OpenClassrooms — mauve logo */
+  --accent-oc:     #7451eb;
+  --accent-mint:   #5eead4;
+
   /* Texte */
   --text-primary:  #e8edf8;
   --text-secondary:#8a9bc0;
@@ -583,6 +587,18 @@ body.cursor-hover .cursor-ring {
   color: var(--accent-mint, #5eead4);
 }
 
+.project-item--oc::before {
+  background: var(--accent-oc);
+  opacity: 0.28;
+}
+.project-item--oc:hover::before {
+  background: var(--accent-oc);
+  opacity: 0.55;
+}
+.project-item--oc:hover .project-item-title {
+  color: var(--accent-oc);
+}
+
 .project-item--accent::before { background: var(--gold) !important; opacity: 0.5; }
 
 .project-item-meta {
@@ -602,6 +618,11 @@ body.cursor-hover .cursor-ring {
   background: rgba(94, 234, 212, 0.1);
   border-color: rgba(94, 234, 212, 0.28);
   color: var(--accent-mint, #5eead4);
+}
+.project-badge--oc {
+  background: rgba(116, 81, 235, 0.1);
+  border-color: rgba(116, 81, 235, 0.28);
+  color: var(--accent-oc);
 }
 .project-badge--gold {
   background: var(--gold-dim);
@@ -657,6 +678,13 @@ body.cursor-hover .cursor-ring {
   color: var(--accent-mint, #5eead4);
   opacity: 0.92;
   border-color: rgba(94, 234, 212, 0.35);
+  font-style: normal;
+  font-weight: 500;
+}
+.btn-soon--oc {
+  color: var(--accent-oc);
+  opacity: 0.92;
+  border-color: rgba(116, 81, 235, 0.35);
   font-style: normal;
   font-weight: 500;
 }
