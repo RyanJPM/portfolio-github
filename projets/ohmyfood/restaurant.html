@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant — OhMyFood</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600&family=Roboto:wght@400;500;700&family=Shrikhand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="page" class="site">
+  <a class="skip-link screen-reader-text" href="#content">Aller au contenu</a>
+  <header class="site-header">
+    <div class="container">
+      <div class="logo"><a href="index.html">OhMyFood</a></div>
+      <button class="hamburger" id="hamburger-toggle" aria-label="Ouvrir le menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <nav class="main-navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="restaurant.html">Restaurant</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+        </ul>
+      </nav>
+      <div class="auth-links">
+        <a href="#">Connexion</a> / <a href="#">Inscription</a>
+      </div>
+    </div>
+  </header>
+  <div id="content" class="site-content">
+    <main id="main" class="site-main">
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Trouvez Nos Restaurants<br>Chez Vous !</h1>
+    <div class="search-box">
+      <form action="#" method="get" onsubmit="event.preventDefault(); alert('Démo portfolio — recherche non connectée.');">
+        <input type="text" placeholder="Recherche votre ville..." name="city">
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </form>
+    </div>
+  </div>
+</section>
+<section class="daily-menu">
+  <div class="container">
+    <div class="menu-reservation-container">
+      <div class="daily-plates">
+        <h2>Les Plats Du Jours</h2>
+        <div class="plate-item">
+          <div class="plate-image"><img src="assets/images/filet-dorade.png" alt="Filet de dorade et patate douce à la vanille"></div>
+          <div class="plate-details">
+            <h3>Filet de dorade & patate douce à la vanille</h3>
+            <p>Un filet de dorade parfaitement cuit, accompagné d'un moussé de patate douce infusé à la vanille. Une pure explosion élégante, un plat digne d'une étoile au guide michelin.</p>
+          </div>
+        </div>
+        <div class="plate-item">
+          <div class="plate-details">
+            <h3>Suprême de volaille & risotto aux morilles</h3>
+            <p>Un suprême de volaille juteux et succulent, servi avec un risotto crémeux aux morilles. Une combinaison fondante et généreuse qui ravit les gourmets.</p>
+          </div>
+          <div class="plate-image"><img src="assets/images/supreme-volaille.png" alt="Suprême de volaille & risotto aux morilles"></div>
+        </div>
+      </div>
+      <div class="reservation-form">
+        <form action="#" method="post" onsubmit="event.preventDefault(); alert('Démo portfolio — réservation non connectée.');">
+          <div class="form-group"><div class="custom-select"><input type="text" value="Paris (Default)" readonly></div></div>
+          <div class="form-group"><div class="custom-select"><input type="date"></div></div>
+          <div class="form-group"><div class="custom-select"><input type="time"></div></div>
+          <div class="form-group"><input type="number" placeholder="Nombre de couverts" min="1"></div>
+          <div class="form-group"><button type="submit" class="btn-reserve">Réserver</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="reservation-options">
+  <div class="container">
+    <div class="options-container">
+      <div class="option-phone">
+        <h2>Réserver par téléphone</h2>
+        <div class="phone-numbers"><p>Tel : 0692 10 12 14</p><p>Fixe : 0262 10 12 14</p></div>
+      </div>
+      <div class="option-divider"></div>
+      <div class="option-online">
+        <h2>Réserver en ligne</h2>
+        <button type="button" class="btn-create-account" onclick="alert('Démo portfolio.')">Créer un compte</button>
+        <p class="or-text">ou</p>
+        <button type="button" class="btn-login" onclick="alert('Démo portfolio.')">Se connecter</button>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="modal-overlay"></div>
+
+    </main>
+  </div>
+  <footer id="colophon" class="site-footer">
+    <div class="footer-content container">
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h3>À PROPOS DE NOUS</h3>
+          <p>Chez Ohmyfood, nous mettons l'accent sur la qualité, la simplicité et la découverte culinaire. Notre objectif : faire de chaque réservation une expérience fluide, rapide et gourmande.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Les Avis</h3>
+          <div class="review-box">
+            <div class="stars">★ ★ ★ ★ ★</div>
+            <p class="review-text">Une plateforme intuitive et rapide. J'ai découvert de super restaurants grâce à Ohmyfood. Un vrai coup de cœur !</p>
+          </div>
+        </div>
+      </div>
+      <div class="newsletter-section">
+        <h3>Inscrivez-vous à notre newsletter</h3>
+        <form class="newsletter-form" action="#" method="post" onsubmit="event.preventDefault(); alert('Démo portfolio — formulaire non connecté.');">
+          <input type="email" placeholder="Votre email" required>
+          <button type="submit">S'inscrire</button>
+        </form>
+      </div>
+      <div class="basFooter">
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+          <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+        </div>
+        <div class="footer-bottom">
+          <a href="#">CGU</a>
+          <a href="#">Mentions légales</a>
+          <a href="#">Politique de confidentialité</a>
+        </div>
+      </div>
+    </div>
+    <div id="popup-concours" class="popup-overlay" style="display: none;">
+      <div class="popup-content">
+        <button class="popup-close" aria-label="Fermer le pop-up">×</button>
+        <h2>🎁 Jeu Concours OhMyFood 🎁</h2>
+        <p>Participez et tentez de gagner un <strong>repas gastronomique pour 2</strong> dans l'un de nos restaurants partenaires !</p>
+        <form id="popup-form" action="#" method="post">
+          <input type="email" placeholder="Votre email" required>
+          <button type="submit">Participer</button>
+        </form>
+        <p class="popup-note">* Une seule participation par utilisateur est autorisée.</p>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

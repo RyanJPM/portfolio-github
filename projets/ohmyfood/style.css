@@ -1,0 +1,1886 @@
+/*
+Theme Name: Oh My Food
+Description: Child theme for twentytwentyone. You can now safely customize it and not risk losing your customizations.
+Author: Eric - Oh My Food
+Author URI: https://oh-my-food.fr
+Template: twentytwentyone
+Version: 1.0
+*/
+
+
+/* Newsletter */
+
+.newsletter-box {
+    display: none; /* Cache newsletter box */
+}
+
+
+/* HEADER */
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header {
+  background-color: #fff;
+  padding: 40px 0;
+  border-bottom: 1px solid #eee;
+  top: 0;
+  z-index: 10;
+}
+
+.site-main{
+  padding-top: 0!important;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #222;
+}
+
+.main-navigation .nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-navigation .nav-menu li a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+}
+
+.main-navigation .nav-menu li a:hover {
+  color: #ff6565;
+}
+
+.auth-links {
+  font-size: 0.95rem;
+}
+
+.auth-links a {
+  color: #444;
+  text-decoration: none;
+}
+
+.auth-links a:hover {
+  color: #ff6565;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .site-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .main-navigation .nav-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Pour éviter que tout déborde */
+  gap: 15px;
+}
+
+.logo {
+  flex: 1;
+}
+
+.main-navigation {
+  flex: 2;
+}
+
+.auth-links {
+  flex: 1;
+  text-align: right;
+}
+
+
+.main-navigation .nav-menu {
+  justify-content: center;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-menu li {
+  display: inline-block;
+}
+
+
+
+/* Police Header */
+
+/* === POLICES === */
+body {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+}
+
+/* Menu de navigation */
+.main-navigation .nav-menu li a {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600; /* Semibold */
+  font-size: 1rem;
+}
+
+/* Logo OhMyFood */
+.logo a {
+  font-family: 'Shrikhand', cursive;
+  font-weight: 400; /* Regular */
+  font-size: 2rem;
+  text-transform: none;
+}
+
+
+
+
+
+
+
+/* === HAMBURGER MENU === */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 10px;
+  z-index: 1001;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Animation pour le toggle */
+.hamburger.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile - affichage hamburger */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .main-navigation {
+    display: none;
+    width: 100%;
+  }
+
+  .main-navigation.active {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 15px;
+    width: 100%;
+    border-top: 1px solid #eee;
+  }
+
+  .main-navigation .nav-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .auth-links {
+    width: 100%;
+    text-align: left;
+    margin-top: 10px;
+  }
+  #hamburger-toggle{
+    background-color: white!important;
+  }
+  .auth-links {
+    width: 100%;
+    text-align: center!important;
+    margin-top: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  /* FOOTER */
+  .site-footer {
+    background-color: #f8f8f8;
+    padding: 30px 0;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .site-footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .site-footer a {
+    color: #555;
+    text-decoration: none;
+  }
+  
+  .site-footer a:hover {
+    text-decoration: underline;
+  }
+  
+
+  @media (max-width: 768px) {
+    .main-navigation .nav-menu {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .site-header .container {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  
+  /* === FOOTER === */
+/* === FOOTER === */
+
+footer{
+  max-width: 100%!important;
+}
+.site-footer {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  padding: 60px 0 30px;
+  font-family: 'Playfair Display', serif;
+}
+
+.footer-content {
+  position: relative;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* Ligne verticale entre les colonnes */
+.footer-columns:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background-color: #634f33; /* Couleur dorée/bronze comme sur la maquette */
+  transform: translateX(-50%);
+}
+
+.footer-column {
+  max-width: 500px;
+  flex: 1 1 45%;
+}
+
+.footer-column h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.footer-column p {
+  font-family: 'Roboto', serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #cccccc;
+  max-width: 90%;
+}
+
+.basFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  font-family: 'Roboto', serif;
+  font-size: 0.95rem;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Avis */
+.review-box {
+  background-color: #ffffff;
+  padding: 20px 25px;
+  border-radius: 5px;
+  color: #222;
+  max-width: 90%;
+}
+
+.review-box .stars {
+  color: #CDA274;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  letter-spacing: 5px;
+}
+
+.review-box .review-text {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #333;
+}
+
+/* Bas du footer */
+.footer-bottom {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 20px;
+  font-size: 0.85rem;
+  border-top: none; /* Suppression de la ligne du haut */
+}
+
+.footer-bottom a {
+  font-family: 'Roboto', serif;
+  color: #cccccc;
+  text-decoration: none;
+  margin: 0 15px 0 0;
+  padding: 0 15px 0 0;
+  border-right: 1px solid transparent;
+}
+
+.footer-bottom a:not(:last-child) {
+  border-right: 1px solid #444;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-columns {
+    flex-direction: column;
+  }
+  
+  .footer-columns:after {
+    display: none;
+  }
+  
+  .review-box {
+    margin-left: 0;
+  }
+  
+  .footer-bottom {
+    flex-wrap: wrap;
+  }
+}
+
+
+/* === NEWSLETTER SECTION STYLING - IMPROVED === */
+
+/* Main newsletter container styling */
+.newsletter-section {
+  padding: 30px 70px;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background-color: rgba(205, 162, 116, 0.1);
+  border-left: 3px solid #CDA274;
+  border-radius: 4px;
+}
+
+.newsletter-section::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: -8px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #CDA274;
+}
+
+.newsletter-section h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  margin-bottom: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.newsletter-section h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background-color: #CDA274;
+}
+
+/* Form container styling */
+.newsletter-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+/* Input styling for the newsletter form */
+.newsletter-section .wpcf7-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.newsletter-section .wpcf7-form p {
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter-section .wpcf7-form-control-wrap {
+  width: 100%;
+}
+
+.newsletter-section input[type="text"],
+.newsletter-section input[type="email"] {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.newsletter-section input[type="text"]::placeholder,
+.newsletter-section input[type="email"]::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.newsletter-section input[type="text"]:focus,
+.newsletter-section input[type="email"]:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  outline: none;
+  border-color: #CDA274;
+  box-shadow: 0 0 5px rgba(205, 162, 116, 0.3);
+}
+
+/* Submit button styling */
+.newsletter-section input[type="submit"] {
+  padding: 12px 24px;
+  background-color: #CDA274 !important;
+  color: #000 !important;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  width: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.newsletter-section input[type="submit"]:hover {
+  background-color: #b48e60 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.newsletter-section input[type="submit"]:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form messages */
+.newsletter-section .wpcf7-response-output {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Success message */
+.newsletter-section .wpcf7-mail-sent-ok {
+  background-color: rgba(76, 175, 80, 0.3);
+  border-left: 3px solid #4CAF50;
+}
+
+/* Error message */
+.newsletter-section .wpcf7-validation-errors {
+  background-color: rgba(244, 67, 54, 0.3);
+  border-left: 3px solid #F44336;
+}
+
+/* Form layout for larger screens */
+@media screen and (min-width: 768px) {
+  .newsletter-section .wpcf7-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 10px;
+  }
+  
+  .newsletter-section .wpcf7-form p:not(:last-child) {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .newsletter-section .wpcf7-form p:last-child {
+    margin-top: 0;
+  }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .newsletter-section {
+    padding: 25px 20px;
+  }
+  
+  .newsletter-section input[type="submit"] {
+    width: 100%;
+  }
+  
+  .newsletter-section h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Newsletter icons and decorations */
+.newsletter-section .form-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.2rem;
+}
+
+/* Newsletter description text */
+.newsletter-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #cccccc;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === PAGE ACCUEIL === */
+
+/* === PAGE ACCUEIL === */
+
+/* Section Hero */
+.hero {
+  background-image: url('assets/images/hero-bg.png'); /* Ajoutez votre image de fond */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 150px 20px;
+  position: relative;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  width: 100%;;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.btn-main {
+  display: inline-block;
+  background-color: #CDA274;
+  color: #333;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+}
+
+.btn-main:hover {
+  background-color: #e6c697;
+}
+
+/* Section Restaurants */
+.restaurants {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.restaurants h2 {
+  font-size: 2.2rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 60px;
+  color: #222;
+  font-weight: 600;
+}
+
+.restaurant-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.restaurant-card {
+  flex: 1;
+  text-align: center;
+  max-width: 350px;
+}
+
+.restaurant-image {
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.restaurant-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.restaurant-image img:hover {
+  transform: scale(1.05);
+}
+
+.restaurant-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: #222;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.restaurant-card p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Section Chefs */
+.chefs {
+  padding: 40px 0px 120px 0px;
+  background-color: #fff;
+}
+
+.chefs h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 60px;
+  color: #222;
+  font-weight: 600;
+}
+
+/* Updated Chef Section */
+.chef-timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* Vertical line */
+.chef-timeline::before {
+  content: '';
+  position: absolute;
+  width: 3px;
+  background-color: #CDA274; /* Golden/bronze color as in mockup */
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -0.5px;
+}
+
+.chef-item {
+  padding: 0px 0;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* Left chef (Jeremy and Robert) */
+.chef-left {
+  flex-direction: row;
+}
+
+.chef-left .chef-name {
+  width: 30%;
+  text-align: right;
+  padding-right: 40px;
+  order: 1;
+}
+
+.chef-left .chef-portrait {
+  order: 2;
+}
+
+.chef-left .chef-description {
+  width: 30%;
+  text-align: left;
+  padding-left: 40px;
+  order: 3;
+}
+
+/* Right chef (Sabrina) */
+.chef-right {
+  flex-direction: row;
+}
+
+.chef-right .chef-name {
+  width: 30%;
+  text-align: left;
+  padding-left: 40px;
+  order: 3;
+}
+
+.chef-right .chef-portrait {
+  order: 2;
+}
+
+.chef-right .chef-description {
+  width: 30%;
+  text-align: right;
+  padding-right: 40px;
+  order: 1;
+}
+
+.chef-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+
+
+/* Responsive design for mobile */
+@media screen and (max-width: 768px) {
+  
+  .chef-item {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  
+  .chef-left .chef-name,
+  .chef-right .chef-name {
+    width: calc(100% - 90px);
+    text-align: left;
+    padding: 0 0 10px 70px;
+    order: 1;
+  }
+  
+  .chef-portrait {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 0;
+    top: 40px;
+  }
+  
+  .chef-left .chef-description,
+  .chef-right .chef-description {
+    width: calc(100% - 90px);
+    text-align: left;
+    padding: 10px 0 0 70px;
+    order: 3;
+    margin-left: auto;
+  }
+}
+.chef-portrait {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  background-color: #fff;
+}
+
+
+
+.chef-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.chef-left .chef-description {
+  width: 30%;
+  text-align: left;
+  padding-left: 40px;
+}
+
+.chef-right .chef-description {
+  width: 30%;
+  text-align: right;
+  padding-right: 40px;
+  order: 1;
+}
+
+
+
+
+.chef-item h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: #222;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.chef-item p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+  margin: 5px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Designs */
+@media screen and (max-width: 992px) {
+  .restaurant-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .restaurant-card {
+    flex: 0 0 45%;
+    margin-bottom: 30px;
+  }
+  
+  .chef-timeline::before {
+    display: none;
+  }
+  
+  .chef-item {
+    flex-wrap: wrap;
+  }
+  
+  .chef-left .chef-name,
+  .chef-right .chef-name {
+    width: 100%;
+    text-align: left;
+    padding: 0 0 20px 100px;
+    order: 1;
+  }
+  
+  .chef-portrait {
+    margin-left: 0;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 80px;
+    height: 80px;
+  }
+  
+  .chef-left .chef-description,
+  .chef-right .chef-description {
+    width: 100%;
+    text-align: left;
+    padding: 20px 0 0 100px;
+    order: 3;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .btn-main {
+    font-size: 0.9rem;
+  }
+  
+  .restaurant-card {
+    flex: 0 0 100%;
+  }
+
+  
+  .chef-left .chef-name,
+  .chef-right .chef-name {
+    padding: 0 0 20px 70px;
+  }
+  
+  .chef-portrait {
+    width: 60px;
+    height: 60px;
+    left: 0;
+  }
+  
+  .chef-left .chef-description,
+  .chef-right .chef-description {
+    padding: 10px 0 0 70px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === PAGE À PROPOS === */
+
+/* Section Valeurs */
+.valeurs {
+  padding: 80px 20px;
+}
+
+.valeurs-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.valeurs-image {
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 400px;
+}
+
+.valeurs-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.valeurs-text {
+  flex: 1;
+}
+
+.valeurs-text h2 {
+  font-size: 2.2rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 30px;
+  color: #222;
+  font-weight: 600;
+}
+
+.valeurs-text p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Section Histoire */
+.histoire {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+}
+
+.histoire-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.histoire-text {
+  flex: 1;
+}
+
+.histoire-text h2 {
+  font-size: 2.2rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 30px;
+  color: #222;
+  font-weight: 600;
+}
+
+.histoire-text p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.histoire-gallery {
+  flex: 1;
+  max-width: 450px;
+}
+
+.histoire-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Section Fondateurs */
+.fondateurs {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.fondateurs h2 {
+  font-size: 2.2rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 60px;
+  color: #222;
+  font-weight: 600;
+}
+
+.fondateurs-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.fondateur-card {
+  flex: 1;
+  text-align: center;
+  max-width: 350px;
+}
+
+.fondateur-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
+}
+
+.fondateur-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fondateur-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: #222;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.fondateur-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  color: #CDA274;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.fondateur-bio {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+  .valeurs-content,
+  .histoire-content,
+  .fondateurs-list{
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .valeurs-image,
+  .histoire-gallery {
+    margin-bottom: 30px;
+  }
+  
+  .fondateur-card {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+  
+
+}
+
+@media screen and (max-width: 768px) {
+  .valeurs,
+  .histoire,
+  .fondateurs {
+    padding: 50px 20px;
+  }
+  
+  .valeurs-text h2,
+  .histoire-text h2,
+  .fondateurs h2 {
+    font-size: 1.8rem;
+  }
+  
+  .fondateur-photo {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === STYLES POUR LA PAGE RESTAURANT === */
+
+/* Section recherche restaurant avec image de fond */
+.restaurant-search {
+  background-image: url('assets/images/hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.restaurant-search::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.search-container {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.restaurant-search h1 {
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.search-box {
+  position: relative;
+  margin: 0 auto;
+  width: 50%;
+  min-width: 300px;
+  max-width: 800px;
+}
+
+.search-box input[type="text"] {
+  width: 100%;
+  padding: 12px 50px 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.search-box button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Section des plats du jour et réservation */
+.daily-menu {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.menu-reservation-container {
+  display: flex;
+  align-items: center;
+  gap: 10vh;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.daily-plates {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.daily-plates h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #222;
+  font-weight: 600;
+  text-align: center;
+}
+
+.plate-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.plate-image {
+  flex: 0 0 120px;
+  height: 120px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.plate-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.plate-details {
+  flex: 1;
+}
+
+.plate-details h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #222;
+  font-weight: 600;
+}
+
+.plate-details p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #555;
+}
+
+/* Formulaire de réservation */
+
+
+
+/* === FORMULAIRE CF7 - PERSONNALISÉ POUR PAGE RESTAURANT === */
+
+.reservation-form {
+  flex: 0 0 450px;
+  background-color: #fff;
+  padding: 70px 60px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.reservation-form .wpcf7-form p {
+  margin-bottom: 15px;
+}
+
+.reservation-form input[type="text"],
+.reservation-form input[type="email"],
+.reservation-form input[type="number"],
+.reservation-form input[type="tel"],
+.reservation-form input[type="date"],
+.reservation-form textarea,
+.reservation-form select {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 0.95rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+.reservation-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.reservation-form input[type="submit"],
+.reservation-form button,
+.wpcf7-form .wpcf7-submit,
+.reservation-form .wpcf7-submit {
+  width: 100%;
+  padding: 12px;
+  background-color: #CDA274!important;
+  color: #000!important;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Roboto', sans-serif;
+}
+
+.reservation-form input[type="submit"]:hover,
+.wpcf7-form .wpcf7-submit:hover,
+.reservation-form .wpcf7-submit:hover {
+  background-color: #b48e60!important;
+}
+
+/* Supprime le spinner par défaut */
+.wpcf7-spinner {
+  display: none !important;
+}
+
+/* Messages de validation / erreurs */
+.wpcf7-response-output {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  font-size: 0.95rem;
+  color: #555;
+  font-family: 'Roboto', sans-serif;
+  border-left: 5px solid #CDA274;
+}
+
+.search-box form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0)!important;
+}
+
+button{
+  background-color: #CDA274!important;
+  color: #000000!important;
+}
+
+/* .reservation-form {
+  flex: 0 0 450px;
+  background-color: #fff;
+  padding: 100px 60px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.custom-select {
+  position: relative;
+}
+
+.custom-select input[type="text"] {
+  width: 100%;
+  padding: 10px 35px 10px 15px;
+  font-size: 0.95rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.custom-select i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+.reservation-form input[type="number"] {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 0.95rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+
+
+.btn-reserve {
+  width: 100%;
+  padding: 12px;
+  background-color: #CDA274!important;
+  color: #000000!important;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-reserve:hover {
+  background-color: #b48e60;
+} */
+
+
+
+
+
+
+
+
+
+/* Modifications pour la section reservation-options */
+.reservation-options {
+  display: none; /* Reste caché par défaut */
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  padding: 60px 60px;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  z-index: 999;
+  max-width: 800px;
+  width: 90%;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  opacity: 0.9;
+  backdrop-filter: blur(20px);
+}
+
+/* Overlay de fond quand la modale est affichée */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 998;
+}
+
+.options-container {
+  display: flex;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.option-phone, .option-online {
+  flex: 1;
+  padding: 40px;
+  text-align: center;
+}
+
+.option-divider {
+  width: 1px;
+  background-color: #eee;
+}
+
+.reservation-options h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #222;
+  font-weight: 600;
+}
+
+.phone-numbers {
+  margin-top: 20px;
+}
+
+.phone-numbers p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.btn-create-account, .btn-login {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #CDA274;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 15px;
+}
+
+.btn-create-account:hover, .btn-login:hover {
+  background-color: #b48e60;
+}
+
+.or-text {
+  margin: 15px 0;
+  font-family: 'Roboto', sans-serif;
+  color: #777;
+}
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+  .menu-reservation-container {
+    flex-direction: column;
+  }
+  
+  .reservation-form {
+    max-width: 100%;
+  }
+  
+  .daily-plates {
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .restaurant-search h1 {
+    font-size: 2rem;
+  }
+  
+  .options-container {
+    flex-direction: column;
+  }
+  
+  .option-divider {
+    height: 1px;
+    width: 100%;
+  }
+  
+  .plate-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .plate-details {
+    padding: 0 15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Pop Up */
+
+
+/* === POP-UP CONCOURS === */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 40px 30px;
+  max-width: 500px;
+  width: 90%;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+}
+
+.popup-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.popup-content p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.popup-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.popup-content input[type="text"],
+.popup-content input[type="email"] {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.popup-content button {
+  padding: 12px;
+  background-color: #CDA274;
+  border: none;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.popup-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  display: flex;
+  width: 0;
+  height: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-note {
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 15px;
+}

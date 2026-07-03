@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos — OhMyFood</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600&family=Roboto:wght@400;500;700&family=Shrikhand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="page" class="site">
+  <a class="skip-link screen-reader-text" href="#content">Aller au contenu</a>
+  <header class="site-header">
+    <div class="container">
+      <div class="logo"><a href="index.html">OhMyFood</a></div>
+      <button class="hamburger" id="hamburger-toggle" aria-label="Ouvrir le menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <nav class="main-navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="restaurant.html">Restaurant</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+        </ul>
+      </nav>
+      <div class="auth-links">
+        <a href="#">Connexion</a> / <a href="#">Inscription</a>
+      </div>
+    </div>
+  </header>
+  <div id="content" class="site-content">
+    <main id="main" class="site-main">
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Découvrez Nos<br>Restaurants D'exception !</h1>
+    <a href="restaurant.html" class="btn-main">Voir nos Restaurants</a>
+  </div>
+</section>
+<section class="valeurs">
+  <div class="container">
+    <div class="valeurs-content">
+      <div class="valeurs-image"><img src="assets/images/team-chefs.png" alt="Notre équipe de chefs"></div>
+      <div class="valeurs-text">
+        <h2>Nos Valeurs</h2>
+        <p>Chez Ohmyfood, nous croyons en une gastronomie accessible, élégante et conviviale.</p>
+        <p>Nous sélectionnons des établissements qui partagent nos engagements : qualité des produits, accueil chaleureux et respect du temps de chacun.</p>
+        <p>Notre ambition : offrir à tous une expérience culinaire soignée, depuis la réservation jusqu'au dessert, en quelques clics.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="histoire">
+  <div class="container">
+    <div class="histoire-content">
+      <div class="histoire-text">
+        <h2>Notre Histoire</h2>
+        <p>Ohmyfood est né de la passion commune de deux gourmets pour la cuisine raffinée et les expériences fluides.</p>
+        <p>Frustrés par les sites de réservation complexes et impersonnels, ils décident de créer une solution simple, intuitive et esthétique.</p>
+        <p>Depuis sa création, Ohmyfood accompagne les amateurs de bonne cuisine dans leurs découvertes, en rendant la réservation aussi savoureuse que le repas.</p>
+      </div>
+      <div class="histoire-gallery"><img src="assets/images/photo-gallery.png" alt="Galerie de photos de restaurants"></div>
+    </div>
+  </div>
+</section>
+<section class="fondateurs">
+  <div class="container">
+    <h2>Les Fondateur</h2>
+    <div class="fondateurs-list">
+      <div class="fondateur-card">
+        <div class="fondateur-photo"><img src="assets/images/emma-lafontaine.png" alt="Emma LAFONTAINE"></div>
+        <h3>Emma LAFONTAINE</h3>
+        <p class="fondateur-title">Directrice de création</p>
+        <p class="fondateur-bio">Emma a imaginé Ohmyfood comme une marque élégante et humaine. Inspirée par ses voyages et son amour pour la gastronomie, elle veille à l'harmonie entre interface intuitive et simplicité.</p>
+      </div>
+      <div class="fondateur-card">
+        <div class="fondateur-photo"><img src="assets/images/louis-martel.png" alt="Louis MARTEL"></div>
+        <h3>Louis MARTEL</h3>
+        <p class="fondateur-title">Expert en stratégie digitale et co-fondateur</p>
+        <p class="fondateur-bio">Fort d'une expérience en marketing numérique, Louis a conçu l'expérience utilisateur autour de valeurs d'accessibilité et de performance.</p>
+      </div>
+      <div class="fondateur-card">
+        <div class="fondateur-photo"><img src="assets/images/chloe-vincent.png" alt="Chloé VINCENT"></div>
+        <h3>Chloé VINCENT</h3>
+        <p class="fondateur-title">Responsable des partenariats restaurants</p>
+        <p class="fondateur-bio">Chloé entretient une relation privilégiée avec chaque établissement référencé sur OhMyFood.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </main>
+  </div>
+  <footer id="colophon" class="site-footer">
+    <div class="footer-content container">
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h3>À PROPOS DE NOUS</h3>
+          <p>Chez Ohmyfood, nous mettons l'accent sur la qualité, la simplicité et la découverte culinaire. Notre objectif : faire de chaque réservation une expérience fluide, rapide et gourmande.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Les Avis</h3>
+          <div class="review-box">
+            <div class="stars">★ ★ ★ ★ ★</div>
+            <p class="review-text">Une plateforme intuitive et rapide. J'ai découvert de super restaurants grâce à Ohmyfood. Un vrai coup de cœur !</p>
+          </div>
+        </div>
+      </div>
+      <div class="newsletter-section">
+        <h3>Inscrivez-vous à notre newsletter</h3>
+        <form class="newsletter-form" action="#" method="post" onsubmit="event.preventDefault(); alert('Démo portfolio — formulaire non connecté.');">
+          <input type="email" placeholder="Votre email" required>
+          <button type="submit">S'inscrire</button>
+        </form>
+      </div>
+      <div class="basFooter">
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+          <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+        </div>
+        <div class="footer-bottom">
+          <a href="#">CGU</a>
+          <a href="#">Mentions légales</a>
+          <a href="#">Politique de confidentialité</a>
+        </div>
+      </div>
+    </div>
+    <div id="popup-concours" class="popup-overlay" style="display: none;">
+      <div class="popup-content">
+        <button class="popup-close" aria-label="Fermer le pop-up">×</button>
+        <h2>🎁 Jeu Concours OhMyFood 🎁</h2>
+        <p>Participez et tentez de gagner un <strong>repas gastronomique pour 2</strong> dans l'un de nos restaurants partenaires !</p>
+        <form id="popup-form" action="#" method="post">
+          <input type="email" placeholder="Votre email" required>
+          <button type="submit">Participer</button>
+        </form>
+        <p class="popup-note">* Une seule participation par utilisateur est autorisée.</p>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

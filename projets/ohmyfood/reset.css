@@ -1,0 +1,44 @@
+/* ==========================================================================
+   Reset CSS pour Twenty Twenty-One
+   Inspiré par le dépôt GitHub officiel du thème :
+   https://github.com/WordPress/twentytwentyone
+   Ce reset vise à neutraliser les styles par défaut trop marqués.
+   ========================================================================== */
+
+/* Appliquer à tous les éléments et pseudo-éléments une réinitialisation de margin, padding et box-sizing */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Réinitialiser la typographie de base */
+html, body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-weight: normal;
+  line-height: 1.5;
+  color: inherit;
+  background: none;
+}
+
+/* Supprimer le style des listes */
+ul, ol {
+  list-style: none;
+}
+
+/* Réinitialiser les styles des tableaux */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Réinitialiser les images */
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}

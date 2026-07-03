@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil — OhMyFood</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600&family=Roboto:wght@400;500;700&family=Shrikhand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="page" class="site">
+  <a class="skip-link screen-reader-text" href="#content">Aller au contenu</a>
+  <header class="site-header">
+    <div class="container">
+      <div class="logo"><a href="index.html">OhMyFood</a></div>
+      <button class="hamburger" id="hamburger-toggle" aria-label="Ouvrir le menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <nav class="main-navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="restaurant.html">Restaurant</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+        </ul>
+      </nav>
+      <div class="auth-links">
+        <a href="#">Connexion</a> / <a href="#">Inscription</a>
+      </div>
+    </div>
+  </header>
+  <div id="content" class="site-content">
+    <main id="main" class="site-main">
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Découvrez Nos<br>Restaurants D'exception !</h1>
+    <a href="restaurant.html" class="btn-main">Voir nos Restaurants</a>
+  </div>
+</section>
+<section class="restaurants" id="restaurants">
+  <div class="container">
+    <h2>Nos Restaurants Les Plus Grand</h2>
+    <div class="restaurant-list">
+      <div class="restaurant-card">
+        <div class="restaurant-image"><img src="assets/images/restaurant-paris.png" alt="Restaurant de Paris"></div>
+        <h3>Restaurant de Paris</h3>
+        <p>Plongez dans une ambiance chic et chaleureuse au cœur de la capitale. Un lieu idéal pour savourer une cuisine raffinée dans un cadre design.</p>
+      </div>
+      <div class="restaurant-card">
+        <div class="restaurant-image"><img src="assets/images/restaurant-dijon.png" alt="Restaurant de Dijon"></div>
+        <h3>Restaurant de Dijon</h3>
+        <p>Un écrin cosy aux inspirations bourguignonnes, parfait pour un dîner intimiste et une découverte de saveurs locales revisitées.</p>
+      </div>
+      <div class="restaurant-card">
+        <div class="restaurant-image"><img src="assets/images/restaurant-bordeaux.png" alt="Restaurant de Bordeaux"></div>
+        <h3>Restaurant de Bordeaux</h3>
+        <p>Un espace lumineux et élégant où chaque plat est une invitation à la détente. L'adresse idéale pour un moment d'exception.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="chefs">
+  <div class="container">
+    <h2>Nos Meilleurs Chefs</h2>
+    <div class="chef-timeline">
+      <div class="chef-item chef-left">
+        <div class="chef-name"><h3>Jeremy RIVIERE</h3></div>
+        <div class="chef-portrait"><img src="assets/images/jeremy-riviere.png" alt="Jeremy RIVIERE"></div>
+        <div class="chef-description">
+          <p>Passionné par la cuisine moderne, Jeremy sublime chaque plat avec une touche d'audace.</p>
+          <p>Sa créativité en fait une référence des nouvelles saveurs parisiennes.</p>
+        </div>
+      </div>
+      <div class="chef-item chef-right">
+        <div class="chef-portrait"><img src="assets/images/sabrina-payet.png" alt="Sabrina PAYET"></div>
+        <div class="chef-name"><h3>Sabrina PAYET</h3></div>
+        <div class="chef-description">
+          <p>Originaire de La Réunion, Sabrina marie finesse et tradition.</p>
+          <p>Elle élabore des recettes à la fois élégantes et gourmandes, inspirées de son héritage et des cuisines du monde.</p>
+        </div>
+      </div>
+      <div class="chef-item chef-left">
+        <div class="chef-name"><h3>Robert Hoareau</h3></div>
+        <div class="chef-portrait"><img src="assets/images/robert-hoareau.png" alt="Robert Hoareau"></div>
+        <div class="chef-description">
+          <p>Spécialiste des produits du terroir, Robert valorise les ingrédients locaux avec maîtrise.</p>
+          <p>Son approche authentique séduit les amateurs de cuisine sincère et généreuse.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </main>
+  </div>
+  <footer id="colophon" class="site-footer">
+    <div class="footer-content container">
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h3>À PROPOS DE NOUS</h3>
+          <p>Chez Ohmyfood, nous mettons l'accent sur la qualité, la simplicité et la découverte culinaire. Notre objectif : faire de chaque réservation une expérience fluide, rapide et gourmande.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Les Avis</h3>
+          <div class="review-box">
+            <div class="stars">★ ★ ★ ★ ★</div>
+            <p class="review-text">Une plateforme intuitive et rapide. J'ai découvert de super restaurants grâce à Ohmyfood. Un vrai coup de cœur !</p>
+          </div>
+        </div>
+      </div>
+      <div class="newsletter-section">
+        <h3>Inscrivez-vous à notre newsletter</h3>
+        <form class="newsletter-form" action="#" method="post" onsubmit="event.preventDefault(); alert('Démo portfolio — formulaire non connecté.');">
+          <input type="email" placeholder="Votre email" required>
+          <button type="submit">S'inscrire</button>
+        </form>
+      </div>
+      <div class="basFooter">
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+          <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+        </div>
+        <div class="footer-bottom">
+          <a href="#">CGU</a>
+          <a href="#">Mentions légales</a>
+          <a href="#">Politique de confidentialité</a>
+        </div>
+      </div>
+    </div>
+    <div id="popup-concours" class="popup-overlay" style="display: none;">
+      <div class="popup-content">
+        <button class="popup-close" aria-label="Fermer le pop-up">×</button>
+        <h2>🎁 Jeu Concours OhMyFood 🎁</h2>
+        <p>Participez et tentez de gagner un <strong>repas gastronomique pour 2</strong> dans l'un de nos restaurants partenaires !</p>
+        <form id="popup-form" action="#" method="post">
+          <input type="email" placeholder="Votre email" required>
+          <button type="submit">Participer</button>
+        </form>
+        <p class="popup-note">* Une seule participation par utilisateur est autorisée.</p>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
